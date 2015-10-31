@@ -1,4 +1,4 @@
-exports.autoCoerce = function autoCoerce(obj) {
+module.exports = function autoCoerce(obj) {
   for(var key in obj) {
     if (typeof obj[key] === 'object') {
       obj[key] = fullCoerce( obj[key] );
