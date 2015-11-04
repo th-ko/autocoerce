@@ -1,6 +1,6 @@
 {
   "name": "autocoerce",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tiny library that automatically converts JSON fields to numbers or dates",
   "main": "src/index.js",
   "scripts": {
