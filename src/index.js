@@ -11,7 +11,8 @@ module.exports = function autoCoerce(obj, weakDateCheck) {
   return obj;
 }
 
-function coerceISODate(text, weakDateCheck) {
+function coerceISODate(text, weakDateCheck) {  
+  if (typeof text != "string") return text;
   try {
     var date = new Date(text);
     if (weakDateCheck) {
@@ -28,6 +29,7 @@ function coerceISODate(text, weakDateCheck) {
 
 
 function coerceNumber(text) {
+  if (typeof text != "string") return text;
   var num = Number(text);
   return isNaN(num) ? text : num;
 }
